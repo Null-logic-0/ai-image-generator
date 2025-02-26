@@ -64,7 +64,7 @@ function AuthForm() {
         {error && <p className="text-red-300 mt-3">{error}</p>}
         <p className="flex flex-col gap-3 mt-4">
           <button
-            className="bg-sky-400 text-stone-900 font-semibold py-2 rounded-lg hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-stone-400 cursor-pointer"
+            className="bg-[#CAFF00] text-[#151515] font-semibold py-2 rounded-lg hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-stone-400 cursor-pointer"
             disabled={isPending}
           >
             {!isPending && authMode === "login" ? "Login" : "Signup"}

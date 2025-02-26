@@ -5,7 +5,7 @@ function Form({ children, className, action }) {
     <form
       action={action}
       className={twMerge(
-        "bg-stone-700 p-4 rounded-lg flex flex-col gap-3",
+        "bg-[#151515] p-4 rounded-lg flex flex-col gap-3 border-2 border-[#25232C]",
         className
       )}
     >

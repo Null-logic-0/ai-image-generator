@@ -8,7 +8,7 @@ function Header() {
         <>
           <h1 className="font-bold text-3xl font-mono">Image Generator</h1>
           <button
-            className="mt-2 text-stone-300 hover:bg-stone-600 cursor-pointer bg-stone-500 rounded-lg p-2 shadow-md"
+            className="bg-[#CAFF00] text-[#151515] font-semibold py-2 px-4 rounded-lg hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-stone-400 cursor-pointer"
             onClick={logout}
           >
             Logout

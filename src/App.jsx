@@ -6,7 +6,7 @@ import { useAuthContext } from "./store/auth-context";
 function App() {
   const { token } = useAuthContext();
   return (
-    <div className="bg-stone-800 min-h-screen py-8">
+    <div className="bg-[#060610] min-h-screen py-8">
       <Header />
       <main className="mt-12">
         {!token ? <AuthForm /> : <ImageGeneration />}

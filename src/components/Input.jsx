@@ -5,7 +5,10 @@ function Input({ isTextarea, className, ...props }) {
   return (
     <Component
       {...props}
-      className={twMerge("bg-stone-600 p-2  text-white rounded-lg ", className)}
+      className={twMerge(
+        "bg-[#060610] p-2 border-2 border-[#25232C] text-white rounded-lg focus:border-[#CAFF00] focus:outline-none",
+        className
+      )}
     />
   );
 }

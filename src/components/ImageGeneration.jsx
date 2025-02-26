@@ -55,7 +55,13 @@ function ImageGeneration() {
         <div className="flex flex-col gap-4">
           <InputContainer>
             <Label htmlFor="prompt">Image Prompt</Label>
-            <Input type="text" id="prompt" name="prompt" isTextarea />
+            <Input
+              type="text"
+              id="prompt"
+              name="prompt"
+              isTextarea
+              className="resize-none "
+            />
           </InputContainer>
           <div className="flex gap-5">
             <InputContainer>
@@ -77,7 +83,7 @@ function ImageGeneration() {
                 id="aspectRatio"
                 name="aspectRatio"
                 defaultValue="1:1"
-                className="p-[0.6rem] rounded-sm w-[6rem] bg-stone-600 p-2  text-white rounded-lg"
+                className="p-2 rounded-sm w-[6rem] bg-[#060610] border-2 border-[#25232C] text-white focus:border-[#CAFF00] focus:ring-2 focus:ring-[#CAFF00] focus:outline-none hover:border-[#CAFF00]"
               >
                 <option value="1:1">1:1</option>
                 <option value="16:9">16:9</option>
@@ -90,7 +96,7 @@ function ImageGeneration() {
                 id="format"
                 name="format"
                 defaultValue="png"
-                className="p-[0.6rem] rounded-sm w-[5rem] bg-stone-600 p-2  text-white rounded-lg"
+                className="p-2 rounded-sm w-[5rem] bg-[#060610] border-2 border-[#25232C] text-white focus:border-[#CAFF00] focus:ring-2 focus:ring-[#CAFF00] focus:outline-none hover:border-[#CAFF00]"
               >
                 <option value="webp">WebP</option>
                 <option value="png">PNG</option>
@@ -102,9 +108,9 @@ function ImageGeneration() {
         <p className="flex justify-end">
           <button
             disabled={isPending}
-            className="bg-sky-400 text-black py-3 rounded-lg hover:bg-sky-500 disabled:cursor-not-allowed disabled:bg-stone-400 disabled:text-stone-600 px-10 text-lg"
+            className="bg-[#CAFF00] text-[#151515] font-semibold py-3 rounded-lg hover:border-[#CAFF00] border hover:text-[#CAFF00] hover:bg-transparent disabled:cursor-not-allowed disabled:bg-stone-400 disabled:text-stone-600 px-10 text-lg cursor-pointer"
           >
-            {isPending ? "Generating..." : "Generate!"}
+            {isPending ? "Generating..." : "Generate"}
           </button>
         </p>
       </Form>
@@ -116,11 +122,13 @@ function ImageGeneration() {
           </p>
         )}
         {formState.result === "success" && (
-          <img
-            src={formState.imageUrl}
-            alt={formState.prompt}
-            className="h-[25rem] shadow-2xl rounded-md"
-          />
+          <div className="bg-[#151515] px-4 py-6 rounded-lg flex flex-col gap-3 border-2 border-[#25232C]">
+            <img
+              src={formState.imageUrl}
+              alt={formState.prompt}
+              className="h-[25rem] shadow-2xl rounded-md"
+            />
+          </div>
         )}
         {formState.result === "error" && (
           <p className="text-red-200">{formState.message}</p>
