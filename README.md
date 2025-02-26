@@ -12,3 +12,6 @@ Backend: Node.js, Express, better-sqlite3
 Frontend: React, Vite
 Database: SQLite (hosted on a free service, which may go to sleep when inactive)
 If you experience login or account creation issues, it may be due to the free database hosting going into sleep mode.
+
+
+https://www.youtube.com/watch?v=XoTdKoayU2A
